@@ -1,293 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Austin | Frontend & Fullstack Web Developer</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap" rel="stylesheet" />
-  <title>Dev Server</title>
-</head>
-
-<body>
-  <header class="header container">
-    <nav>
-      <ul class="header__menu">
-        <li>
-          <a class="header__link" href="#about">About</a>
-        </li>
-        <li>
-          <a class="header__link" href="#featured">Work</a>
-        </li>
-        <li>
-          <a class="header__link" href="#contact">Contact</a>
-        </li>
-        <li class="header__line"></li>
-        <li>
-          <button class="header__sun" id="theme-toggle">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
-            </svg>
-          </button>
-        </li>
-        <li>
-          <a class="header__resume btn" href="#">Resume</a>
-        </li>
-      </ul>
-      <button class="header__bars">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path fill-rule="evenodd"
-            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-            clip-rule="evenodd" />
-        </svg>
-      </button>
-    </nav>
-  </header>
-  <!-- Mobile Navigation -->
-  <div class="mobile-nav">
-    <nav>
-      <ul class="mobile-nav__menu">
-        <li>
-          <a class="mobile-nav__link" href="#about">About</a>
-        </li>
-        <li>
-          <a class="mobile-nav__link" href="#featured">Work</a>
-        </li>
-        <li>
-          <a class="mobile-nav__link" href="#contact">Contact</a>
-        </li>
-        <li class="mobile-nav__link-line"></li>
-        <li>
-          <button class="mobile-nav__sun" id="theme-toggle">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
-            </svg>
-          </button>
-        </li>
-        <li>
-          <a class="mobile-nav__btn btn" href="#">Resume</a>
-        </li>
-      </ul>
-    </nav>
-
-  </div>
-  <!--  -->
-  <main>
-    <section class="hero container">
-      <img class="hero__img" src="/hero.png" alt="Profile picture" />
-      <h2 class="hero__subtitle">Hi, I'm Austin 👋</h2>
-      <h1 class="hero__title">
-        FRONT-END <br />
-        WEB DEVELOPER.
-      </h1>
-      <p class="hero__description">
-        A passionate <strong>Frontend / Fullstack</strong> web developer and
-        <strong>UI/UX</strong>
-        enthusiast specialized in building stunning pixel-perfect interactive
-        websites/applications.
-      </p>
-      <a class="hero__btn btn" href="#">Reach out</a>
-    </section>
-    <section class="about container section" id="about">
-      <div class="about__content">
-        <h2 class="about__title">About</h2>
-        <p class="about__description">
-          Hello there! I'm Austin, a <strong>Fullstack</strong> web developer
-          based in <a>Houston</a>. My journey into web development started
-          when I redesigned my church’s website—a challenge that sparked my
-          passion for creating intuitive, clean digital experiences.
-        </p>
-        <p class="about__description">
-          I’m always exploring new technologies and driven to improve, so I
-          can create even better and more effective solutions.
-        </p>
-        <p class="about__description">
-          When I’m not coding, you’ll probably find me at the gym or jamming
-          on my bass guitar—both help keep things balanced and my creativity
-          going.
-        </p>
-        <hr class="about__hr" />
-        <h3 class="about__subtitle">Technologies</h3>
-        <div class="about__ul-container">
-          <ul class="about__ul">
-            <li class="about__list">JavaScript (ES6+)</li>
-            <li class="about__list">CSS</li>
-            <li class="about__list">HTML</li>
-          </ul>
-          <ul class="about__ul">
-            <li class="about__list">ReactJS</li>
-            <li class="about__list">NextJS</li>
-            <li class="about__list">TailwindCSS</li>
-          </ul>
-        </div>
-      </div>
-      <div class="about__img-wrapper">
-        <img class="about__img" src="/about.png" alt="Profile picture" />
-      </div>
-    </section>
-    <section id="featured" class="featured container section" id="featured">
-      <h3 class="featured__subtitle">Featured project</h3>
-      <div class="featured__wrapper">
-        <h2 class="featured__title">AGA CHURCH</h2>
-        <a aria-label="link to featured project" class="featured__link" href="https://www.agachurch.org/"
-          target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
-          </svg>
-        </a>
-        <a aria-label="link to GitHub repo" class="featured__link" href="https://github.com/asunil1515/aga-website"
-          target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+  <body>
+    <header class="header container">
+      <nav>
+        <ul class="header__menu">
+          <li>
+            <a class="header__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="header__link" href="#featured">Work</a>
+          </li>
+          <li>
+            <a class="header__link" href="#contact">Contact</a>
+          </li>
+          <li class="header__line"></li>
+          <li>
+            <button class="header__sun" id="theme-toggle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="header__resume btn" href="#">Resume</a>
+          </li>
+        </ul>
+        <button class="header__bars">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
             <path
-              d="M12 0C5.37 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.793-.258.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.09-.746.083-.73.083-.73 1.205.086 1.84 1.238 1.84 1.238 1.07 1.835 2.807 1.305 3.492.998.107-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.931 0-1.31.467-2.381 1.235-3.221-.123-.303-.536-1.522.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.018.005 2.043.138 3.002.404 2.29-1.552 3.295-1.23 3.295-1.23.655 1.654.242 2.873.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.804 5.628-5.475 5.921.43.37.823 1.102.823 2.222v3.293c0 .322.192.694.8.576C20.565 21.796 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
+              fill-rule="evenodd"
+              d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+              clip-rule="evenodd"
+            />
           </svg>
-        </a>
-      </div>
-      <p class="featured__description">
-        This project involved redesigning the outdated Amazing Grace Assembly
-        website to enhance user experience and functionality. New features
-        include sermon access, donation options, and an online store for
-        church-branded apparel, supporting fundraising for building
-        initiatives. The goal was to create a modern, user-friendly platform
-        for both the congregation and visitors.
-      </p>
-      <div class="featured__info-container">
-        <div>
-          <h3 class="featured__label">Tech stack</h3>
-          <ul class="featured__tech-stack">
-            <li class="featured__info">TailwindCSS</li>
-            <li class="featured__info">ReactJS</li>
-            <li class="featured__info">NextJS</li>
-            <li class="featured__info">TypeScript</li>
-            <li class="featured__info">Framer Motion</li>
-            <li class="featured__info">Nodemailer</li>
-            <li class="featured__info">Square</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="featured__label">Project type</h3>
-          <p class="featured__info">Fullstack</p>
-        </div>
-        <div>
-          <h3 class="featured__label">Timeline</h3>
-          <p class="featured__info">March 2025 - present</p>
-        </div>
-      </div>
-      <div class="featured__img-container">
-        <div class="featured__img-wrapper">
-          <img class="" src="/AGA-hero.png" alt="AGA hero" />
-        </div>
-        <div class="featured__img-wrapper">
-          <img class="" src="/AGA-sermons.png" alt="AGA sermons" />
-        </div>
-        <div class="featured__img-wrapper">
-          <img class="" src="/AGA-about.png" alt="AGA about" />
-        </div>
-        <div class="featured__img-wrapper">
-          <img class="" src="/AGA-pastor.png" alt="AGA pastor" />
-        </div>
-        <div class="featured__img-wrapper">
-          <img class="" src="/AGA-community.png" alt="AGA community" />
-        </div>
-        <div class="featured__img-wrapper">
-          <img class="" src="/AGA-visit.png" alt="AGA visit" />
-        </div>
-        <div class="featured__img-wrapper">
-          <img class="" src="/AGA-beliefs.png" alt="AGA beliefs" />
-        </div>
-        <div class="featured__img-wrapper">
-          <img class="" src="/AGA-donate.png" alt="AGA donate" />
-        </div>
-        <div class="featured__img-wrapper">
-          <img class="" src="/AGA-apparel.png" alt="AGA apparel" />
-        </div>
-        <div class="featured__img-wrapper">
-          <img class="" src="/AGA-tshirt.png" alt="AGA tshirt" />
-        </div>
-      </div>
-    </section>
-    <section class="work container section">
-      <h2 class="work__title">Projects</h2>
-      <p class="work__description">
-        Mollit pariatur tempor nisi dolor non consequat magna cupidatat
-        reprehenderit. Aliquip excepteur ullamco aliquip magna est et commodo
-        deserunt ipsum.
-      </p>
-      <div class="work__container">
-        <!-- Project 1 -->
-        <h3 class="work__project-title">Project 1</h3>
-        <div class="work__img-wrapper work__image1">
-          <img src="https://placehold.co/900x900/0f172a/ffffff?text=Project+1&font=poppins" alt="Project 1" />
-        </div>
-        <div class="work__project work__content1">
-          <h3 class="work__project-subtitle">Project 1</h3>
-          <p class="work__project-description1">
-            Labore magna ut non labore Lorem nisi culpa sint et quis sint.
-            Enim pariatur deserunt do ad exercitation.
+        </button>
+      </nav>
+    </header>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <nav>
+        <ul class="mobile-nav__menu">
+          <li>
+            <a class="mobile-nav__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="mobile-nav__link" href="#featured">Work</a>
+          </li>
+          <li>
+            <a class="mobile-nav__link" href="#contact">Contact</a>
+          </li>
+          <li class="mobile-nav__link-line"></li>
+          <li>
+            <button class="mobile-nav__sun" id="theme-toggle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="mobile-nav__btn btn" href="#">Resume</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <section class="hero container">
+        <img class="hero__img" src="/hero.png" alt="Profile picture" />
+        <h2 class="hero__subtitle">Hi, I'm Austin 👋</h2>
+        <h1 class="hero__title">
+          FRONT-END <br />
+          WEB DEVELOPER.
+        </h1>
+        <p class="hero__description">
+          A passionate <strong>Frontend / Fullstack</strong> web developer and
+          <strong>UI/UX</strong>
+          enthusiast specialized in building stunning pixel-perfect interactive
+          websites/applications.
+        </p>
+        <a class="hero__btn btn" href="#">Reach out</a>
+      </section>
+      <section class="about container section" id="about">
+        <div class="about__content">
+          <h2 class="about__title">About</h2>
+          <p class="about__description">
+            Hello there! I'm Austin, a <strong>Fullstack</strong> web developer
+            based in <a>Houston</a>. My journey into web development started
+            when I redesigned my church’s website—a challenge that sparked my
+            passion for creating intuitive, clean digital experiences.
           </p>
-          <p class="work__project-description2">
-            Ea ut non cupidatat consequat sint elit ipsum culpa dolor cillum
-            commodo. Do esse excepteur cillum deserunt duis incididunt. Eu
-            tempor ullamco aliqua consectetur incididunt anim dolor sunt
-            laboris adipisicing cupidatat sint.
+          <p class="about__description">
+            I’m always exploring new technologies and driven to improve, so I
+            can create even better and more effective solutions.
           </p>
-          <a class="btn work__project-btn" href="#" target="_blank" rel="noopener noreferrer">Website</a>
-        </div>
-        <!-- Project 2 -->
-        <h3 class="work__project-title">Project 2</h3>
-        <div class="work__img-wrapper work__image2">
-          <img src="https://placehold.co/900x900/0f172a/ffffff?text=Project+2&font=poppins" alt="Project 2" />
-        </div>
-        <div class="work__project work__content2">
-          <h3 class="work__project-subtitle">Project 2</h3>
-          <p class="work__project-description1">
-            Sunt sint labore officia irure. Dolore pariatur nisi deserunt sunt
-            exercitation excepteur do reprehenderit fugiat Lorem sint ut.
+          <p class="about__description">
+            When I’m not coding, you’ll probably find me at the gym or jamming
+            on my bass guitar—both help keep things balanced and my creativity
+            going.
           </p>
-          <p class="work__project-description2">
-            Mollit ipsum mollit magna occaecat eiusmod sint fugiat est non
-            adipisicing esse fugiat deserunt minim. Enim occaecat velit eu non
-            amet nostrud officia duis.
-          </p>
-          <a class="btn work__project-btn" href="#" target="_blank" rel="noopener noreferrer">Website</a>
+          <hr class="about__hr" />
+          <h3 class="about__subtitle">Technologies</h3>
+          <div class="about__ul-container">
+            <ul class="about__ul">
+              <li class="about__list">JavaScript (ES6+)</li>
+              <li class="about__list">CSS</li>
+              <li class="about__list">HTML</li>
+            </ul>
+            <ul class="about__ul">
+              <li class="about__list">ReactJS</li>
+              <li class="about__list">NextJS</li>
+              <li class="about__list">TailwindCSS</li>
+            </ul>
+          </div>
         </div>
-        <!-- Project 3 -->
-        <h3 class="work__project-title">Project 3</h3>
-        <div class="work__img-wrapper work__image3">
-          <img src="https://placehold.co/900x900/0f172a/ffffff?text=Project+3&font=poppins" alt="Project 3" />
+        <div class="about__img-wrapper">
+          <img class="about__img lazy loading" src="https://placehold.co/645x635" data-src="/about.png" alt="Profile picture" />
         </div>
-        <div class="work__project work__contetnt3">
-          <h3 class="work__project-subtitle">Project 3</h3>
-          <p class="work__project-description1">
-            Aliquip eu ad est reprehenderit veniam irure exercitation in velit
-            enim ipsum.
-          </p>
-          <p class="work__project-description2">
-            Elit est amet quis incididunt officia velit eiusmod do amet. Sint
-            non qui nulla sit ex cillum non pariatur velit proident ut aliqua
-            fugiat incididunt id minim.
-          </p>
-          <a class="btn work__project-btn" href="#" target="_blank" rel="noopener noreferrer">Website</a>
+      </section>
+      <section id="featured" class="featured container section" id="featured">
+        <h3 class="featured__subtitle">Featured project</h3>
+        <div class="featured__wrapper">
+          <h2 class="featured__title">AGA CHURCH</h2>
+          <a
+            aria-label="link to featured project"
+            class="featured__link"
+            href="https://www.agachurch.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+              />
+            </svg>
+          </a>
+          <a
+            aria-label="link to GitHub repo"
+            class="featured__link"
+            href="https://github.com/asunil1515/aga-website"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path
+                d="M12 0C5.37 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.793-.258.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.09-.746.083-.73.083-.73 1.205.086 1.84 1.238 1.84 1.238 1.07 1.835 2.807 1.305 3.492.998.107-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.931 0-1.31.467-2.381 1.235-3.221-.123-.303-.536-1.522.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.018.005 2.043.138 3.002.404 2.29-1.552 3.295-1.23 3.295-1.23.655 1.654.242 2.873.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.804 5.628-5.475 5.921.43.37.823 1.102.823 2.222v3.293c0 .322.192.694.8.576C20.565 21.796 24 17.298 24 12c0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+          </a>
         </div>
-      </div>
-    </section>
-    <section class="contact container section" id="contact">
-      <h2 class="contact__title">Get In Contact</h2>
-      <p class="contact__description">
-        Whether you are starting a project, have business inquiries or just want to say hi, my inbox is always open so
-        feel free to reach out and I will get back to you as soon as possible.
-      </p>
-      <a class="contact__btn btn" href="mailto:austinsunil1515@gmail.com" target="_blank">Reach Out</a>
-    </section>
-  </main>
-  <footer class="footer container section">
-    <h3 class="footer__title">~ Austin Sunil ~</h3>
-  </footer>
-  <script type="module" src="./src/main.js"></script>
-</body>
-
+        <p class="featured__description">
+          This project involved redesigning the outdated Amazing Grace Assembly
+          website to enhance user experience and functionality. New features
+          include sermon access, donation options, and an online store for
+          church-branded apparel, supporting fundraising for building
+          initiatives. The goal was to create a modern, user-friendly platform
+          for both the congregation and visitors.
+        </p>
+        <div class="featured__info-container">
+          <div>
+            <h3 class="featured__label">Tech stack</h3>
+            <ul class="featured__tech-stack">
+              <li class="featured__info">TailwindCSS</li>
+              <li class="featured__info">ReactJS</li>
+              <li class="featured__info">NextJS</li>
+              <li class="featured__info">TypeScript</li>
+              <li class="featured__info">Framer Motion</li>
+              <li class="featured__info">Nodemailer</li>
+              <li class="featured__info">Square</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="featured__label">Project type</h3>
+            <p class="featured__info">Fullstack</p>
+          </div>
+          <div>
+            <h3 class="featured__label">Timeline</h3>
+            <p class="featured__info">March 2025 - present</p>
+          </div>
+        </div>
+        <div class="featured__img-container">
+          <div class="featured__img-wrapper">
+            <img class="lazy loading" src="https://placehold.co/1920X968" data-src="/AGA-hero.png" alt="AGA hero" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img class="lazy loading" src="https://placehold.co/1920X968" data-src="/AGA-sermons.png" alt="AGA sermons" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img class="lazy loading" src="https://placehold.co/1920X968" data-src="/AGA-about.png" alt="AGA about" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img class="lazy loading" src="https://placehold.co/1920X968" data-src="/AGA-pastor.png" alt="AGA pastor" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img class="lazy loading" src="https://placehold.co/1920X968" data-src="/AGA-community.png" alt="AGA community" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img class="lazy loading" src="https://placehold.co/1920X968" data-src="/AGA-visit.png" alt="AGA visit" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img class="lazy loading" src="https://placehold.co/1920X968" data-src="/AGA-beliefs.png" alt="AGA beliefs" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img class="lazy loading" src="https://placehold.co/1920X968" data-src="/AGA-donate.png" alt="AGA donate" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img class="lazy loading" src="https://placehold.co/1920X968" data-src="/AGA-apparel.png" alt="AGA apparel" />
+          </div>
+          <div class="featured__img-wrapper">
+            <img class="lazy loading" src="https://placehold.co/1920X968" data-src="/AGA-tshirt.png" alt="AGA tshirt" />
+          </div>
+        </div>
+      </section>
+      <section class="work container section">
+        <h2 class="work__title">Projects</h2>
+        <p class="work__description">
+          Mollit pariatur tempor nisi dolor non consequat magna cupidatat
+          reprehenderit. Aliquip excepteur ullamco aliquip magna est et commodo
+          deserunt ipsum.
+        </p>
+        <div class="work__container">
+          <!-- Project 1 -->
+          <h3 class="work__project-title">Project 1</h3>
+          <div class="work__img-wrapper work__image1">
+            <img
+              class="lazy loading"
+              src="https://placehold.co/900x900"
+              data-src="https://placehold.co/900x900/0f172a/ffffff?text=Project+1&font=poppins"
+              alt="Project 1"
+            />
+          </div>
+          <div class="work__project work__content1">
+            <h3 class="work__project-subtitle">Project 1</h3>
+            <p class="work__project-description1">
+              Labore magna ut non labore Lorem nisi culpa sint et quis sint.
+              Enim pariatur deserunt do ad exercitation.
+            </p>
+            <p class="work__project-description2">
+              Ea ut non cupidatat consequat sint elit ipsum culpa dolor cillum
+              commodo. Do esse excepteur cillum deserunt duis incididunt. Eu
+              tempor ullamco aliqua consectetur incididunt anim dolor sunt
+              laboris adipisicing cupidatat sint.
+            </p>
+            <a
+              class="btn work__project-btn"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Website</a
+            >
+          </div>
+          <!-- Project 2 -->
+          <h3 class="work__project-title">Project 2</h3>
+          <div class="work__img-wrapper work__image2">
+            <img
+              class="lazy loading"
+              src="https://placehold.co/900x900"
+              data-src="https://placehold.co/900x900/0f172a/ffffff?text=Project+2&font=poppins"
+              alt="Project 2"
+            />
+          </div>
+          <div class="work__project work__content2">
+            <h3 class="work__project-subtitle">Project 2</h3>
+            <p class="work__project-description1">
+              Sunt sint labore officia irure. Dolore pariatur nisi deserunt sunt
+              exercitation excepteur do reprehenderit fugiat Lorem sint ut.
+            </p>
+            <p class="work__project-description2">
+              Mollit ipsum mollit magna occaecat eiusmod sint fugiat est non
+              adipisicing esse fugiat deserunt minim. Enim occaecat velit eu non
+              amet nostrud officia duis.
+            </p>
+            <a
+              class="btn work__project-btn"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Website</a
+            >
+          </div>
+          <!-- Project 3 -->
+          <h3 class="work__project-title">Project 3</h3>
+          <div class="work__img-wrapper work__image3">
+            <img
+              class="lazy loading"
+              src="https://placehold.co/900x900"
+              data-src="https://placehold.co/900x900/0f172a/ffffff?text=Project+3&font=poppins"
+              alt="Project 3"
+            />
+          </div>
+          <div class="work__project work__contetnt3">
+            <h3 class="work__project-subtitle">Project 3</h3>
+            <p class="work__project-description1">
+              Aliquip eu ad est reprehenderit veniam irure exercitation in velit
+              enim ipsum.
+            </p>
+            <p class="work__project-description2">
+              Elit est amet quis incididunt officia velit eiusmod do amet. Sint
+              non qui nulla sit ex cillum non pariatur velit proident ut aliqua
+              fugiat incididunt id minim.
+            </p>
+            <a
+              class="btn work__project-btn"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Website</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="contact container section" id="contact">
+        <h2 class="contact__title">Get In Contact</h2>
+        <p class="contact__description">
+          Whether you are starting a project, have business inquiries or just
+          want to say hi, my inbox is always open so feel free to reach out and
+          I will get back to you as soon as possible.
+        </p>
+        <a
+          class="contact__btn btn"
+          href="mailto:austinsunil1515@gmail.com"
+          target="_blank"
+          >Reach Out</a
+        >
+      </section>
+    </main>
+    <footer class="footer container section">
+      <h3 class="footer__title">~ Austin Sunil ~</h3>
+    </footer>
+    <script type="module" src="./src/main.js"></script>
+  </body>
 </html>
